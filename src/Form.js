@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as yup from "yup";
+import { Route, Switch } from 'react-router-dom';
 import formSchema from "./formSchema";
 
 function Form(props) {
@@ -177,7 +178,10 @@ function Form(props) {
         <button type="submit" disabled={buttonDisabled}>
           Submit Your Order!
         </button>
-      </form>
+          </form>
+          <Switch>
+              <Route exact path="/"><Home /></Route>
+              </Switch>
     </div>
   );
   

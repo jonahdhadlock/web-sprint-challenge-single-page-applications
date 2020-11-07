@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-// import { Route, Switch } from 'react-router-dom';
-// import Home from './Home';
+import { Route, Switch } from 'react-router-dom';
+import Home from './Home';
 import Form from './Form';
 
 function App() {
@@ -18,9 +18,10 @@ function App() {
   };
   return (
     <div className="App">
-      {/* <Switch>
-        <Route>exact path="/"{Form.js}</Route>
-        </Switch> */}
+      <Switch>
+        <Route exact path="/"><Home /></Route>
+        <Route exact path="/"><Form /></Route>
+        </Switch>
       <Form />
     </div>
   );

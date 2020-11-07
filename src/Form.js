@@ -16,15 +16,15 @@ function Form(props) {
     setFormValues({ ...formValues, [event.target.name]: value });
   };
 
-  function inputChange(event) {
+    function inputChange(event) {
     /* Destructuring the  name and value from the form inputs. */
     const { name, value } = event.target;
     /* 'reach' grabs requirements for the form label equal to form event in formSchema (e.g. name, email, password). 
-            'validate' checks that the value/user input is valid-based on requirements in formSchema.
-            'then' is what happens when successful (in this case, nothing, since there is nothing in the ()). 
-            'catch' is what happens when the inputs are not valid per the formSchema (e.g. logs the message in the .required()). */
-    if (name === "checkbox") {
-      yup
+                    'validate' checks that the value/user input is valid-based on requirements in formSchema.
+                    'then' is what happens when successful (in this case, nothing, since there is nothing in the ()). 
+                    'catch' is what happens when the inputs are not valid per the formSchema (e.g. logs the message in the .required()). */
+      if (name === "checkbox") {
+        yup
         .reach(formSchema, name)
         .validate(event.target.checked)
         .then(() => {})
@@ -68,9 +68,7 @@ function Form(props) {
         <h3>Build Your Own Pizza!</h3>
         <label>Choose Your Size</label>
         <select id="size" name="size">
-          <option value="Choose Size" style={{ color: "black" }}>
-            Choose Your Size
-          </option>
+          <option style={{ color: "black" }} />
           <option value="8-inch" style={{ color: "black" }}>
             8-inch
           </option>
@@ -84,25 +82,58 @@ function Form(props) {
         <p>Choose Your Sauce</p>
         <label id="radioList">
           Tomato
-          <input type="radio" />
+          <input
+            type="radio"
+            name="radio"
+            value={formValues.radio}
+            onChange={inputChange}
+          />
           Pesto
-          <input type="radio" />
+          <input
+            type="radio"
+            name="radio"
+            value={formValues.radio}
+            onChange={inputChange}
+          />
           White
-          <input type="radio" />
+          <input
+            type="radio"
+            name="radio"
+            value={formValues.radio}
+            onChange={inputChange}
+          />
         </label>
         <p>Choose Your Toppings</p>
         <label>
           Cheese
-          <input name="cheese" type="checkbox" checked={false} />
+          <input
+            name="checkbox"
+            type="checkbox"
+            value={formValues.checkbox}
+            onChange={inputChange}
+          />
           Pepperoni
-          <input name="pepperoni" type="checkbox" checked={false} />
+          <input
+            name="checkbox"
+            type="checkbox"
+            value={formValues.checkbox}
+            onChange={inputChange}
+          />
           Onion
-          <input name="onion" type="checkbox" checked={false} />
+          <input
+            name="checkbox"
+            type="checkbox"
+            value={formValues.checkbox}
+            onChange={inputChange}
+          />
         </label>
-              <label>Special Requests</label>
-              <textarea placeholder="I have allergies and can't enjoy pizza."></textarea>
-        {/* <label>Quantity</label> */}
-
+        <label>Special Requests</label>
+        <textarea
+          name="textarea"
+          placeholder="I have allergies and can't enjoy pizza."
+          value={formValues.textarea}
+          onChange={inputChange}
+        />
         <label>Name:</label>
         <input
           type="text"

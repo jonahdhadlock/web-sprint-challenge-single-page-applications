@@ -31,8 +31,11 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
+   This hook provides access to a match object, which is an object that contains information about how a Route's path matches the URL. If there are no arguments defined, then it returns the closest match.
 1. How would you explain form validation to someone who has never programmed before?
+   Form validation is a method that ensures all input fields have been filled out correctly per the requirements provided (e.g. email must be a valid email, password must be at least 8 characters, all fields must be entered before you can submit the form, etc.).
 1. In 1-2 sentences, define end to end testing.
+   Testing is something that is automated for humans; you write the code for the actual website and forms, you write the code for the tests to test what it is you want/need, and cypress.io and other softwares will automate the process of going through the user experience process to test that the features work properly in order of the test code you wrote.
 
 ## Instructions
 

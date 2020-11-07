@@ -7,7 +7,8 @@ function Form(props) {
   const [formValues, setFormValues] = useState(initialForm);
   const [buttonDisabled, setButtonDisabled] = useState(true);
 
-  const submitForm = (event) => {
+    const submitForm = (event) => {
+      console.log(event)
     event.preventDefault();
     const value =
       event.target.type === "checkbox"
@@ -105,8 +106,9 @@ function Form(props) {
         </label>
         <p>Choose Your Toppings</p>
         <label>
-          Cheese
+                  Cheese
           <input
+            id="cheese"
             name="cheese"
             type="checkbox"
             value={formValues.checkbox}
@@ -114,6 +116,7 @@ function Form(props) {
           />
           Pepperoni
           <input
+            id="pepperoni"          
             name="pepperoni"
             type="checkbox"
             value={formValues.checkbox}
@@ -121,6 +124,7 @@ function Form(props) {
           />
           Onion
           <input
+            id="onion"
             name="onion"
             type="checkbox"
             value={formValues.checkbox}
@@ -176,6 +180,7 @@ function Form(props) {
       </form>
     </div>
   );
+  
 }
 
 export default Form;

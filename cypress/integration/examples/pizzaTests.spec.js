@@ -11,14 +11,15 @@ describe('submit button works', () => {
         cy.get('a')
         cy.get('[type="checkbox"]')
         cy.get('[type="radio"]')
-        cy.get('[type="textarea"]')
+        cy.get('[form="usrform"]')
+        
         cy.get([name="size"])
         cy.get('button')
     })
     it('form inputs are empty', () => {
         cy.get('[type="text"]').should('be.empty')
         cy.get('[type="email"]').should('be.empty')
-        cy.get('[type="password"]').should('be.empty')
+        cy.get('[type="tel"]').should('be.empty')
         cy.get('[type="checkbox"]').should('not.be.checked')
         cy.get('button').should('be.disabled')
     })
@@ -28,8 +29,8 @@ describe('submit button works', () => {
     it('entered email data is valid', () => {
         cy.get('[type="email"]').type('example@email.com').should('have.value', 'example@email.com')
     })
-    it('entered password data is valid', () => {
-        cy.get('[type="password"]').type('Runner124##').should('have.value', 'Runner124##')
+    it('entered telephone data is valid', () => {
+        cy.get('[type="tel"]').type('(385) 123-4567').should('have.value', '(385) 123-4567')
     })
     it('entered checkbox data is valid', () => {
         cy.get('[type="checkbox"]').type('[type="checkbox"]')

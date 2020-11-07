@@ -107,28 +107,29 @@ function Form(props) {
         <label>
           Cheese
           <input
-            name="checkbox"
+            name="cheese"
             type="checkbox"
             value={formValues.checkbox}
             onChange={inputChange}
           />
           Pepperoni
           <input
-            name="checkbox"
+            name="pepperoni"
             type="checkbox"
             value={formValues.checkbox}
             onChange={inputChange}
           />
           Onion
           <input
-            name="checkbox"
+            name="onion"
             type="checkbox"
             value={formValues.checkbox}
             onChange={inputChange}
           />
         </label>
         <label>Special Requests</label>
-        <textarea
+              <textarea
+                  form="usrform"
           name="textarea"
           placeholder="I have allergies and can't enjoy pizza."
           value={formValues.textarea}

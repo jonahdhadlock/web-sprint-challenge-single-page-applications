@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useState } from 'react';
+import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import Form from './Form';
 
-const App = () => {
+function App() {
+    const [users, setUsers] = useState("");
+
+  const addNewUser = (user) => {
+    const newUser = {
+      name: user.name,
+      email: user.email,
+      role: user.password
+    };
+
+    setUsers([newUser, ...users]);
+  };
   return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
+    <div className="App">
+      <Switch>
+        <Route exact path="/"><Home /></Route>
+        <Route exact path="/"><Form /></Route>
+        </Switch>
+      <Form />
+    </div>
   );
-};
+}
+
 export default App;

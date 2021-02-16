@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #e60b0b;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +35,79 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background-color: #eee;
+}
+
+h3 {
+  margin: 5px 0 0 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 5px;
+  margin: 2% auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 8px 7px 0 rgba(0, 0, 0, 0.3), 0 6px 15px 0 rgba(0, 0, 0, 0.65);
+  background-color: #e21515;
+  color: #eee;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.4rem;
+}
+
+option {
+  color: black;
+}
+
+#size {
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#radioList {
+  width: 300px;
+  text-align: justify;
+}
+
+textarea {
+  width: 350px;
+  height: 75px;
+  margin: 0 auto;
+}
+
+button,
+input {
+  border-radius: 5px;
+  margin: 3px 0;
+  border: 1px solid black;
+  box-shadow: 0 7px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.15);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.25rem;
+}
+
+input {
+  width: 200px;
+  margin: 3px auto;
+}
+
+label {
+  margin: 3px auto;
+}
+
+button {
+  width: 200px;
+  height: 30px;
+  margin: 6px auto;
+  font-size: 1.4rem;
+}
+
+a {
+  color: #eee;
+  margin-top: 3px;
 }
